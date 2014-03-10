@@ -1,0 +1,16 @@
+<h1>SharePoint#index</h1>
+<!--
+<p>SPAppToken  : <%= @spAppToken %></p>
+<p>Decoded : <%= @decoded %></p>
+<p>Access Token : <%= @access_token %></p>
+-->
+
+<% unless flash[:notice].blank? %>
+  <h3><%= flash[:notice] %></h3>
+<% end %>
+
+<p><%= link_to 'Title', title_sharepoint_url %></p>
+<p><%= link_to 'Create a Folder', create_folder_sharepoint_url %></p>
+<p><%= link_to 'Upload a File', upload_file_sharepoint_url %></p>
+
+

@@ -27,6 +27,13 @@ gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'
 
+# Required by SharePoint REST service client
+gem 'jwt'
+gem 'json'
+gem 'rest-client'
+gem 'nokogiri'
+gem 'addressable'
+
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
@@ -42,4 +49,9 @@ end
 # gem 'capistrano', group: :development
 
 # Use debugger
-# gem 'debugger', group: [:development, :test]
+group :development do
+  gem 'byebug'
+  gem 'thin'
+end
+
+

@@ -2,6 +2,15 @@ Darkseid::Application.routes.draw do
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
+  post '/', to: 'sharepoint#auth'
+
+  resource :sharepoint, :controller => 'sharepoint' do
+    get :index
+    get :title
+    get :create_folder
+    get :upload_file
+  end
+
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
 
